@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="index-style.css">
+    <link rel="icon" href="images/me-svgrepo-com.svg" type="icon">
+    <script src="https://kit.fontawesome.com/15c3936d9e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>AQIMAN</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header" onclick="closemenu()">Home</a></li>
+                    <li><a href="#about" onclick="closemenu()">About</a></li>
+                    <li><a href="#interest" onclick="closemenu()">Interest</a></li>
+                    <li><a href="#hobby" onclick="closemenu()">Hobby</a></li>
+                    <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+                    <li><a onclick="logout()" onclick="closemenu()" 
+                    		style="color: #080808;
+                    		border: none;
+                    		background-color: #EF4026;
+                    		border-radius: 5px;
+                    		padding: 10px;
+                            font-size: 1rem"
+                            onmouseover="this.style.opacity='0.8'; this.style.cursor='pointer'" 
+    						onmouseout="this.style.opacity='1'; this.style.cursor='default'"
+    						onmousedown="this.style.opacity='0.5';"
+       						onmouseup="this.style.opacity='1';">
+                    LOG OUT</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>CSC584 - Enterprise Programming</p>
+                <h3>Hi, I am <span>Muhammad Aqiman</span><br>From M3CS2304A</h3>
+            </div>
+            <img class="myimg" src="images/AQIMAN.JPG" width="250px" height="250px">
+        </div>
+    </div>
+
+    <!-- ---------------ABOUT-------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img class="mypic" src="images/AQIMAN3.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My passion for coding is deeply intertwined with my Bachelor's degree in Computer Science. Throughout my coursework, I've had the opportunity to delve into various programming languages, algorithms, and software development methodologies. This hands-on experience has not only solidified my technical skills but has also reinforced my love for coding.</p>                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Background</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Name</span><br>Muhammad Aqiman Bin Mohd Fauzi</li><br>
+                            <li><span>Student ID</span><br>2022675706</li><br>
+                            <li><span>Siblings</span><br>I'm the 3rd child out of 5 siblings.</li><br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016 - 2020</span><br>SMK Taman Molek, Johor Bahru - Accounting</li><br>
+                            <li><span>2021 - 2022</span><br>Johor Matriculation College - Accounting</li><br>
+                            <li><span>2022 - 2026</span><br>UiTM Kampus Jasin - Bachelor of Computer Science (Hons.)</li><br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------Interest-------------- -->
+    <div id="interest">
+        <div class="container">
+            <h1 class="sub-title">My Interest</h1>
+            <div class="interest-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Learn new things</h2>
+                    <p>I enjoy picking up new skills, especially in programming. I'm driven to keep going because I'm curious about the solution.</p>
+                    <a href="https://youtu.be/H1mb3ARvSJo?si=AyPV9mCa11ZrttNb" target="_blank">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-music"></i>
+                    <h2>Listening to music</h2>
+                    <p>I'm passionate about music and find it both inspiring and relaxing. My love for music reflects my creativity, open-mindedness, and ability to find joy in diverse experiences, which I bring while doing my assignments.</p>
+                    <a href="https://youtu.be/kZJ8BfEu-P8?si=jOQDYUZUSy_yfA1Z" target="_blank">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-book"></i>
+                    <h2>Reading</h2>
+                    <p>Exploring new worlds through books is not just a hobby for me; it's a way of life that fuels my curiosity and shapes my perspective on the world. I love reading book about new technology. I do believe that "the more you read, the more you know".</p>
+                    <a href="https://youtu.be/AUw7laSlcbo?si=zEzdR_rAfAl4ZpCF" target="_blank">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------Hobby-------------- -->
+    <br><br><div id="hobby">
+        <div class="container">
+            <h1 class="sub-title">My Hobby</h1>
+            <div class="hobby-list">
+                <div class="hobby">
+                    <img src="images/game.jpg">
+                    <div class="layer">
+                        <h3>Playing games</h3>
+                        <p>In my free time, I love to play games. It's a fun and relaxing way for me to unwind and enjoy myself. Whether I'm diving into an immersive single-player adventure or competing with friends in a multiplayer match, gaming is a hobby that brings me joy and excitement.</p>
+                    </div>
+                </div>
+                <div class="hobby">
+                    <img src="images/travel.jpg">
+                    <div class="layer">
+                        <h3>Travelling</h3>
+                        <p>I love to travel and explore new places. Whether it's a nearby town or a faraway destination, I enjoy experiencing different cultures, and trying new foods. Traveling broadens my horizons and gives me a sense of adventure and discovery.</p>
+                    </div>
+                </div>
+                <div class="hobby">
+                    <img src="images/futsal.jpg">
+                    <div class="layer">
+                        <h3>Playing futsal</h3>
+                        <p>Playing futsal is another one of my passions. I enjoy the fast-paced nature of the game, the teamwork involved, and the thrill of scoring goals. It's a great way for me to stay active and have fun. Every evening at 6pm, my friends and I would go to court and play futsal together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------Contact-------------- -->
+    <br><br><div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>aqiman1312@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>011 - 61371067</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100009877629960" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/aqimxn" target="_blank"><i class="fa-brands fa-twitter" target="_blank"></i></a>
+                        <a href="https://www.instagram.com/aqimann/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/muhammad-aqiman" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Aqiman.</i></p>
+        </div>
+    </div>
+
+
+<script>
+    // Select all elements with the class "tab-links" and store them in the variable tablinks
+    var tablinks = document.getElementsByClassName("tab-links");
+
+    // Select all elements with the class "tab-contents" and store them in the variable tabcontents
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    // Define a function called opentab with a parameter tabname
+    function opentab(tabname){
+
+        // Remove the class "active-link" from all elements with the class "tab-links"
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+
+        // Remove the class "active-tab" from all elements with the class "tab-contents"
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+
+        // Add the class "active-link" to the clicked tab link
+        event.currentTarget.classList.add("active-link");
+
+        // Add the class "active-tab" to the corresponding tab content
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    // Select the element with the id "sidemenu" and store it in the variable sidemeu
+    var sidemeu = document.getElementById("sidemenu");
+
+    // Define a function called openmenu
+    function openmenu(){
+        // Set the style of the sidemeu element to move it to the right (showing the menu)
+        sidemeu.style.right = "0";
+    }
+
+    // Define a function called closemenu
+    function closemenu(){
+        // Set the style of the sidemeu element to move it to the left (hiding the menu)
+        sidemeu.style.right = "-200px";
+    }
+</script>
+
+
+<script>
+    // Define the URL of the Google Apps Script web app where the form data will be submitted
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyWWwTnY-agUz8q0rmAz6EM1RXc-zfW_fhh5cCVCJrs7gywv40EokvaWk4qyfszYakd/exec';
+
+    // Get the form element with the name 'submit-to-google-sheet' and store it in the variable form
+    const form = document.forms['submit-to-google-sheet'];
+
+    // Get the element with the id "msg" and store it in the variable msg
+    const msg = document.getElementById("msg");
+
+    // Add an event listener to the form for the 'submit' event
+    form.addEventListener('submit', e => {
+        // Prevent the default form submission behavior
+        e.preventDefault();
+
+        // Send a POST request to the Google Apps Script web app with the form data
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                // If the request is successful, display a success message
+                msg.innerHTML = "Message sent successfully.";
+                
+                // Clear the success message after 5 seconds
+                setTimeout(function(){
+                    msg.innerHTML = "";
+                }, 5000);
+
+                // Reset the form fields
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message));
+    });
+</script>
+
+
+</body>
+</html>
